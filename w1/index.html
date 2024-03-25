@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W1 Bio Page</title>
+
+    <style>
+        body {
+            background-color: lightgoldenrodyellow;
+        }
+
+        .hide {
+            display:none;
+        }
+        
+        h1 {
+            color: green;
+        }
+
+        h2 {
+            color:#ff00c8;
+        }
+
+        .twentyFivePercent{
+            width : 25%;
+            height : 25%;
+        }
+
+        .fiftyPercent{
+            width : 50%;
+            height : 50%;
+        }
+
+        .largeOrange{
+            font-size:110%;
+            color: orange;
+        }
+
+        .brightPurpleWiggle{
+            color:blueviolet;
+        }
+
+        .brightPurpleWiggle:hover{
+            animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+            transform: translate3d(0, 0, 0);
+        }
+
+        @keyframes shake {
+            10%, 90% {
+                transform: translate3d(-1px, 0, 0);
+            }
+
+            20%, 80% {
+                transform: translate3d(1px, 0, 0);
+            }
+
+            30%, 50%, 70% {
+                transform: translate3d(-4px, 0, 0);
+            }
+
+            40%, 60% {
+                transform: translate3d(4px, 0, 0);
+            }
+        }
+        .imageFlipClick{
+            transform: scaleX(1);
+        }
+        
+        .imageFlipClick:hover{
+            animation: flip 1s both;
+            transform: scaleX(1);
+            
+        }
+
+        @keyframes flip {
+            0% {
+                transform: rotateY(0);
+            }
+
+            100% {
+                transform: rotateY(360deg);
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <h1>Dylan Fisher</h1>
+    <hr>
+
+    <div id="nav">
+        <a href="#">BIO</a>
+        <a href="#">EDUCATION</a>
+        <a href="#">HOBBIES</a>
+        <hr>
+    </div>
+    <div id="main">
+        <div id="bio" class="largeOrange">
+            <h2>My Bio</h2>
+            <img src="images/me.jpg" class = "twentyFivePercent" alt="Image of Me in blue shirt smiling with blury nature background">
+            <p>
+               I am Dylan James Fisher, a 3rd Term Student at the New England Institute of Technology. I am currently working on attaining a Associates Degree in Software Enginerringa and Web Development.
+               I have been proggraming for 8 years, with a direct expreience of:
+
+                <ul>
+                    <li>5 years in Python</li>
+                    <li>3 years of HTML, Javascript, CSS</li>
+                    <li>2 years of Java</li>
+                </ul>
+
+                I have had a geeral intrested in science for my entire life, being part of a robotics team, and consistatly reading books on world phnomonon
+                Science is no the only intrest I have however.
+                I also have a great intrest in writing, expressially under a creative context.
+                I am working on becoming a author and have been pulished with my highschool under a few writing competitions. 
+                I am also part of the Assosation of Rhoad Island authors, and plan on publihing a colletion of my work soon.
+
+                Some more gneral aspects of my self include:
+
+                <ul>
+                    <li><b>Eye Color</b>: Brown</li>
+                    <li><b>Hair Color</b>: Brown</li>
+                    <li><b>Height</b>: 5 feet 2 inches</li>
+                </ul>
+            <hr>
+        </div>
+
+        <div id="ed">
+            <h2>Schooling</h2>
+
+            <ul class="spaceLink">
+                <li>
+                    <a href="https://cms.chariho.k12.ri.us/" target="_blank">Chariho Regional Middle School</a>
+                </li>
+
+                <li>
+                    <a href="https://chs.chariho.k12.ri.us/" target="_blank">Chariho Regional High School</a>
+                </li>
+
+                <li>
+                    <a href="https://www.neit.edu/" target="_blank">New England Institute of Techology</a>
+                </li>
+            </ul>
+
+            <hr>
+        </div>
+
+        <div id="hobbies" >
+            <h2>Hobbies</h2>
+
+            <ol>
+                <li class="brightPurpleWiggle">
+                    <p>
+                        Writing Poetry
+                    </p>
+                </li>
+
+                <li class="brightPurpleWiggle">
+                    <p>
+                        Playing Magic the Gathering
+                    </p>
+                </li>
+
+                <li class="brightPurpleWiggle">
+                    <p>
+                        Playing Dungons and Dragons
+                    </p>
+                </li>
+
+                <li class="brightPurpleWiggle">
+                    <p>
+                        Creating Cyphers
+                    </p>
+                </li>
+
+                <li class="brightPurpleWiggle">
+                    <p>
+                        Developing Langaues
+                    </p>
+                </li>
+           
+        </ol>
+
+        <img src="images/mtg.jpg" class="fiftyPercent imageFlipClick" alt="Image of each of the Magic the Gathering Colors and Mana">
+    
+        <hr>
+    </div>
+
+    <div id="footer">
+        <p><i>©2024 Dylan Fisher | W1 Assignment</i></p>
+    </div>
+
+</body>
+<script>
+    var a = Array.from(document.querySelectorAll('a'))
+    var div = document.querySelectorAll(`#main div`)
+
+    for(let i=0; i<a.length; i++){
+        a[i].addEventListener(`click`, hide)
+    }
+       
+    function hide(e){
+        e.preventDefault();
+           
+        for(let i=0; i < div.length; i++){
+            div[i].classList.add(`hide`);
+        }
+           
+        div[a.indexOf(e.target)].classList.remove(`hide`);
+    }
+</script>
+</html>

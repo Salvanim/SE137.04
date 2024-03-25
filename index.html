@@ -61,7 +61,6 @@ function fillLinks(username, repo){
     //Itterates though data for dictionary indexs
     for(const dict in data) {
         var name = data[dict].name.split('.')[0]
-        
         //Removes README file and currrent file from propogation of page
         if(name != 'README' && data[dict].path != 'index.html'){
 
