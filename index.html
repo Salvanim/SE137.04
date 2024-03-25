@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="author" content="Dylan Fisher">
+    <meta name="description" content="Repo Index">
+
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome to Dylan's Repo Index</h1>
+    <h2>A place for all of my project links</h2>
+    
+</body>
+<script type="module">
+
+//getData is a function that uses github api to get the content of a given github repo at a given path of a give user
+function getData(username, repo, path){
+    //Defines url to api page
+    const urlString = `https://api.github.com/repos/${username}/${repo}/contents/${path}`;
+    //Defines base http request to access api page
+    const request = new XMLHttpRequest();
+
+    //gets content of api page
+    request.open("GET", urlString, false);
+    request.send(null);
+
+    if (request.status === 200) {
+        return JSON.parse(request.responseText);
+    }
+
+    return null;
+}
+
+//returns path location of this file
+function currentPath(){
+    var loc = window.location.pathname;
+    var dir = loc.substring(0, loc.lastIndexOf('/'));
+    return dir
+}
+
+//adds a heading object that contains given text of given size to body 
+function createHeading(text, size){
+    //Creates heading
+    var h = document.createElement('H' + size)
+    var t = document.createTextNode(text);
+    h.appendChild(t)
+
+    //Propogates body with heading
+    document.body.appendChild(h);
+}
+
+//Uses all preiouse methods to fill page with headings and links to different index html pages in given repo of given user
+function fillLinks(username, repo){
+    //Retrives data
+    var data = getData(username, repo, "")
+
+    //Itterates though data for dictionary indexs
+    for(const dict in data) {
+        var name = data[dict].name.split('.')[0]
+        
+        //Removes README file and currrent file from propogation of page
+        if(name != 'README' && data[dict].path != 'index.html'){
+
+            console.log(data[dict].type)
+            //Creates heading for link to page
+            createHeading(name, 3)
+
+            //Creates link to page
+            var a = document.createElement('a') 
+            var link = document.createTextNode(name)
+            a.appendChild(link)
+
+            a.title = "This is a link to " + name
+
+            a.href = currentPath() + "/" + data[dict]['path']
+
+            //Propogates body with link
+            document.body.appendChild(a);
+        }
+    }
+}
+
+fillLinks("Salvanim", "SE111_202420")
+
+</script>
+</html>
