@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+div {
+    color: red;
+}
+
+#also {
+    background-color: black;
+}
+
+.another {
+    font-size: large;
+}
+
+div b {
+    color:blue;
+}
+
+.another b{
+    background-color: blueviolet;
+}
+
+input[type="text"] {
+    background-color: yellow;
+}
+
+a:visited{
+    color: brown;
+}
+
+a:link{
+    color: brown;
+}
+
+b:hover {
+    font-size: 200%;
+}
+
+#also::after{
+    content:"My name is bob"
+}
