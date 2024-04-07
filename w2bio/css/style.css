@@ -65,26 +65,21 @@ a{
 
 }
 
-
 a:link {
     color: #D8DAD7;
 }
 
-/* visited link */
 a:visited {
     color: #D8DAD7;
 }
 
-/* mouse over link */
 a:hover {
     color: #a8a9a7;
 }
 
-/* selected link */
 a:active {
     color: #8b84b9
 }
-
 
 #ed li{
     padding: 10px;
