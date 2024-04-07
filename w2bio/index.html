@@ -21,28 +21,30 @@
             <div class="center">
                 <img src="images/me.jpg" alt="Image of Me in blue shirt smiling with blury nature background">
             </div>
-
-               My name is Dylan James Fisher. I am a 3rd Term Student at the New England Institute of Technology. 
+            <p>
+               My name is Dylan James Fisher. I am a 3rd Term Student at the New England Institute of Technology.
                I am currently working on attaining a Associates Degree in Software Enginerringa and Web Development.
                I have been proggraming for 8 years, with a direct expreience of:
-            
+
                 <ul>
                     <li>5 years in Python</li>
                     <li>3 years of HTML, Javascript, CSS</li>
                     <li>2 years of Java</li>
                 </ul>
+            </p>
+            <p>
                 I have had a geeral intrested in science for my entire life, being part of a robotics team, and consistatly reading books on world phnomonon
                 Science is no the only intrest I have however.
                 I also have a great intrest in writing, expressially under a creative context.
-                I am working on becoming a author and have been pulished with my highschool under a few writing competitions. 
+                I am working on becoming a author and have been pulished with my highschool under a few writing competitions.
                 I am also part of the Assosation of Rhoad Island authors, and plan on publihing a colletion of my work soon.
 
                 Some more gneral aspects of my self include:
-
+            </p>
                 <ul>
-                    <li><b>Eye Color</b>: Brown</li>
-                    <li><b>Hair Color</b>: Brown</li>
-                    <li><b>Height</b>: 5 feet 2 inches</li>
+                    <li><p><b>Eye Color</b>: Brown</p></li>
+                    <li><p><b>Hair Color</b>: Brown</p></li>
+                    <li><p><b>Height</b>: 5 feet 2 inches</p></li>
                 </ul>
         </div>
 
@@ -98,7 +100,7 @@
                         Developing Langaues
                     </p>
                 </li>
-           
+
         </ol>
 
         <div class="center">
@@ -113,16 +115,17 @@
 
 </body>
 <script>
-    var a = Array.from(document.querySelectorAll('a'))
+
+    var a = Array.from(document.querySelectorAll('div[id="nav"] a'))
     var div = document.querySelectorAll(`#main div:not([id="footer"]):not([class="center"])`)
     console.log(div)
     for(let i=0; i<a.length; i++){
         a[i].addEventListener(`click`, hide)
     }
-       
+
     function hide(e){
         e.preventDefault();
-           
+
         for(let i=0; i < div.length; i++){
             div[i].classList.add(`hide`);
         }

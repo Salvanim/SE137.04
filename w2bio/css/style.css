@@ -2,18 +2,28 @@
 
 body {
     background-color: gray;
+    font-family: "Times New Roman", Times, serif;
 }
 
 .hide {
     display:none;
 }
 
-h1{ 
+p {
+    color: rgb(20, 20, 20);
+}
+
+b {
+    color: rgb(0,0,0);
+}
+
+h1{
     border-bottom: 1px solid black;
     padding-bottom: 5px;
     margin-bottom: 5px;
     text-align: center;
     box-sizing: border-box;
+
 }
 
 h2 {
@@ -33,8 +43,6 @@ div:not(#main .center) {
 }
 
 #nav a{
-    text-decoration: none;
-    color: #D8DAD7;
     display: inline-block;
     border-right: 1px solid black;
     border-left: 1px solid black;
@@ -52,12 +60,34 @@ img{
     height: 25%;
 }
 
-#ed a{
+a{
     text-decoration: none;
-    color: #D8DAD7; 
+
 }
+
+
+a:link {
+    color: #D8DAD7;
+}
+
+/* visited link */
+a:visited {
+    color: #D8DAD7;
+}
+
+/* mouse over link */
+a:hover {
+    color: #a8a9a7;
+}
+
+/* selected link */
+a:active {
+    color: #8b84b9
+}
+
 
 #ed li{
     padding: 10px;
     text-align: left;
 }
+
