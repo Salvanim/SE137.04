@@ -81,6 +81,10 @@ a:active {
     color: #8b84b9
 }
 
+::selection{
+    color: #8b84b9;
+}
+
 #ed li{
     padding: 10px;
     text-align: left;
