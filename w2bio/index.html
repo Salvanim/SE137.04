@@ -3,126 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>W1 Bio Page</title>
+    <title>Bio Page</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
 
-    <h1>Dylan Fisher</h1>
+    
+    <main>
+        <header>
+            <h1>Dylan Fisher</h1>
+        </header>
+        <nav>
+            <a href="#">BIO</a>
+            <a href="#">EDUCATION</a>
+            <a href="#">HOBBIES</a>
+        </nav>
 
-    <div id="nav">
-        <a href="#">BIO</a>
-        <a href="#">EDUCATION</a>
-        <a href="#">HOBBIES</a>
-    </div>
-    <div id="main">
-        <div id="bio">
+        <section>
             <h2>My Bio</h2>
             <div class="center">
                 <img src="images/me.jpg" alt="Image of Me in blue shirt smiling with blury nature background">
             </div>
-
-               My name is Dylan James Fisher. I am a 3rd Term Student at the New England Institute of Technology. 
+            <p>
+               My name is Dylan James Fisher. I am a 3rd Term Student at the New England Institute of Technology.
                I am currently working on attaining a Associates Degree in Software Enginerringa and Web Development.
                I have been proggraming for 8 years, with a direct expreience of:
-            
+
                 <ul>
                     <li>5 years in Python</li>
                     <li>3 years of HTML, Javascript, CSS</li>
                     <li>2 years of Java</li>
                 </ul>
+            </p>
+            <p>
                 I have had a geeral intrested in science for my entire life, being part of a robotics team, and consistatly reading books on world phnomonon
                 Science is no the only intrest I have however.
                 I also have a great intrest in writing, expressially under a creative context.
-                I am working on becoming a author and have been pulished with my highschool under a few writing competitions. 
+                I am working on becoming a author and have been pulished with my highschool under a few writing competitions.
                 I am also part of the Assosation of Rhoad Island authors, and plan on publihing a colletion of my work soon.
 
                 Some more gneral aspects of my self include:
-
+            </p>
                 <ul>
-                    <li><b>Eye Color</b>: Brown</li>
-                    <li><b>Hair Color</b>: Brown</li>
-                    <li><b>Height</b>: 5 feet 2 inches</li>
+                    <li><p><b>Eye Color</b>: Brown</p></li>
+                    <li><p><b>Hair Color</b>: Brown</p></li>
+                    <li><p><b>Height</b>: 5 feet 2 inches</p></li>
                 </ul>
-        </div>
+        </section>
 
-        <div id="ed">
+        <section>
+            
             <h2>Schooling</h2>
+            
+            <div id="ed">
+                <ul>
+                    <li>
+                        <a href="https://cms.chariho.k12.ri.us/" target="_blank">Chariho Regional Middle School</a>
+                    </li>
 
-            <ul>
-                <li>
-                    <a href="https://cms.chariho.k12.ri.us/" target="_blank">Chariho Regional Middle School</a>
-                </li>
+                    <li>
+                        <a href="https://chs.chariho.k12.ri.us/" target="_blank">Chariho Regional High School</a>
+                    </li>
 
-                <li>
-                    <a href="https://chs.chariho.k12.ri.us/" target="_blank">Chariho Regional High School</a>
-                </li>
+                    <li>
+                        <a href="https://www.neit.edu/" target="_blank">New England Institute of Techology</a>
+                    </li>
+                </ul>
+            </div>
 
-                <li>
-                    <a href="https://www.neit.edu/" target="_blank">New England Institute of Techology</a>
-                </li>
-            </ul>
+        </section>
 
-        </div>
-
-        <div id="hobbies" >
+        <section>
             <h2>Hobbies</h2>
 
-            <ol>
-                <li>
-                    <p>
-                        Writing Poetry
-                    </p>
-                </li>
+                <ol>
+                    <li>
+                        <p>
+                            Writing Poetry
+                        </p>
+                    </li>
 
-                <li>
-                    <p>
-                        Playing Magic the Gathering
-                    </p>
-                </li>
+                    <li>
+                        <p>
+                            Playing Magic the Gathering
+                        </p>
+                    </li>
 
-                <li>
-                    <p>
-                        Playing Dungons and Dragons
-                    </p>
-                </li>
+                    <li>
+                        <p>
+                            Playing Dungons and Dragons
+                        </p>
+                    </li>
 
-                <li>
-                    <p>
+                    <li>
+                        <p>
                         Creating Cyphers
-                    </p>
-                </li>
+                        </p>
+                    </li>
 
-                <li>
-                    <p>
-                        Developing Langaues
-                    </p>
-                </li>
-           
-        </ol>
+                    <li>
+                        <p>
+                            Developing Langaues
+                        </p>
+                    </li>
+                </ol>
 
-        <div class="center">
-            <img src="images/mtg.jpg" alt="Image of each of the Magic the Gathering Colors and Mana">
-        </div>
+                <div class="center">
+                    <img src="images/mtg.jpg" alt="Image of each of the Magic the Gathering Colors and Mana">
+                </div>
+        </section>
 
-    </div>
+        
 
-    <div id="footer">
-        <p><i>©2024 Dylan Fisher | W1 Assignment</i></p>
-    </div>
+        <footer>
+            <p><i>©2024 Dylan Fisher | W1 Assignment</i></p>
+        <footer>
+
+    </main>
 
 </body>
 <script>
-    var a = Array.from(document.querySelectorAll('a'))
-    var div = document.querySelectorAll(`#main div:not([id="footer"]):not([class="center"])`)
+
+    var a = Array.from(document.querySelectorAll('nav a'))
+    var div = document.querySelectorAll(`main section`)
     console.log(div)
     for(let i=0; i<a.length; i++){
         a[i].addEventListener(`click`, hide)
     }
-       
+
     function hide(e){
         e.preventDefault();
-           
+
         for(let i=0; i < div.length; i++){
             div[i].classList.add(`hide`);
         }
