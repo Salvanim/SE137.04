@@ -1,0 +1,121 @@
+@font-face {
+    font-family: InterBlack;
+    src: url(w3\fonts\Inter)
+}
+
+body {
+    background: rgb(185, 167, 255);
+    padding: 0;
+    margin: 0;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "header"
+    "section" 
+    "footer";
+}
+
+header {
+    background: rgb(71, 66, 121);
+    color: rgb(255, 255, 255);
+    font-family: 'InterBlack';
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 44px;
+    letter-spacing: 0px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+section {
+    background: rgb(71, 66, 121);
+    display: grid;
+    grid-template-columns: 50% 20% 30%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "bio bio bio"
+    "hob hob ed";
+}
+
+.bio {
+    margin-top: 13px;
+    margin-left: 11px;
+    margin-right: 13px;
+    margin-bottom: 15px;
+    background: rgb(106, 99, 176);
+    grid-area: bio;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "h2"
+    "section";
+}
+
+.bio h2{
+    color: rgb(255, 255, 255);
+    font-family: 'InterBlack';
+    font-size: 39px;
+    font-weight: 400;
+    line-height: 47px;
+    letter-spacing: 0px;
+    text-align: left;
+    margin: 12px;
+    padding-left: 5px;
+    background: rgb(78, 70, 143);
+}
+
+.bio section{
+    background: rgb(89, 85, 131);
+    margin: 12px;
+    height: 343px;
+    color: rgb(255, 255, 255);
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: 0px;
+    text-align: left;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "p img";
+}
+
+.bio section p{
+    margin: 5px;
+}
+
+.bio section img{
+    margin: 16px;
+    width: 251px;
+    height: 310px;
+    border-radius: 58px;
+    right: 50%;
+    grid-area: img;
+}
+
+.ed {
+    grid-area: ed;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "h2"
+    "section";
+}
+
+.hob {
+    grid-area: hob;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "h2 image"
+    "section image";
+}
