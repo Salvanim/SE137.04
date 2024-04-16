@@ -113,9 +113,9 @@ section {
 .hob {
     grid-area: hob;
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: auto;
     grid-template-rows: auto;
     grid-template-areas: 
-    "h2 image"
-    "section image";
+    "h2"
+    "section";
 }
