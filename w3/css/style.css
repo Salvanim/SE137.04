@@ -42,10 +42,7 @@ section {
 }
 
 .bio {
-    margin-top: 13px;
-    margin-left: 11px;
-    margin-right: 13px;
-    margin-bottom: 15px;
+    margin: 1.3%;
     background: rgb(106, 99, 176);
     grid-area: bio;
     display: grid;
@@ -65,14 +62,12 @@ section {
     letter-spacing: 0px;
     text-align: left;
     margin: 12px;
-    padding-left: 5px;
     background: rgb(78, 70, 143);
 }
 
 .bio section{
     background: rgb(89, 85, 131);
-    margin: 12px;
-    height: 343px;
+    margin: 1.2%;
     color: rgb(255, 255, 255);
     font-family: Inter;
     font-size: 24px;
@@ -88,7 +83,7 @@ section {
 }
 
 .bio section p{
-    margin: 5px;
+    margin: 0.5%;
 }
 
 .bio section img{
@@ -96,26 +91,39 @@ section {
     width: 251px;
     height: 310px;
     border-radius: 58px;
-    right: 50%;
     grid-area: img;
 }
 
-.ed {
-    grid-area: ed;
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    grid-template-areas: 
-    "h2"
-    "section";
+.hob{
+    width: 300px;
+    height: 258px;
+    background-image: url('images/dnd.PNG');
+    background-repeat: no-repeat;
+    background-position: center;
+    
 }
 
-.hob {
-    grid-area: hob;
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    grid-template-areas: 
-    "h2"
-    "section";
+.hob h2{
+    position: relative;
+    color: rgb(255, 255, 255);
+    font-family: 'InterBlack';
+    font-size: 20px;
+    font-weight: 400;
+    height: 20%;
+    width: 200px;
+    left: 30%;
+    top: 20%;
+    transform: rotate(-10.00deg);
+    text-align: center;
+    background: rgb(75, 89, 141);
+    padding: 0;
+}
+
+.hob section {
+    position: relative;
+    background: rgb(75, 89, 141);
+    opacity: 0.56;
+    transform: rotate(-10.00deg);
+    left: 30%;
+    top:50%;
 }
