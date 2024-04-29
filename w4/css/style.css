@@ -1,0 +1,22 @@
+header{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 80% 20%;
+    grid-template-areas: 
+    "h2 contacts";
+}
+
+.youtube {
+    font-size: 2em;
+    color: red;
+}
+
+.snapchat {
+    font-size: 2em;
+    color: red;
+}
+
+.twitter {
+    font-size: 2em;
+    color: red;
+}
