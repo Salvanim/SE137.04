@@ -25,5 +25,5 @@ function buttonClick(e)
     e.target.style.color='#000000'
 
     var breadCrumbs = document.querySelector('div #breadcrumbs');
-    breadCrumbs.innerHTML = `<a href="#">${e.target.innerText}</a>`;
+    breadCrumbs.innerHTML = `<a href="#">SE_137</a> <p>></p> <a href="#">W6</a> <p>></p> <a href="#">Homework</a> <p>></p> <a href="#">${e.target.innerText}</a>`;
 }
