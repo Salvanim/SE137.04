@@ -32,9 +32,8 @@ aside{
 .tray{
     width:144px;
     min-width:144px;
-    background-color:#7b7575;
+    background-color:#373737;
     transition:all 1s;
-    color:white;
     display: flex;
     justify-content: flex-end;
     overflow: hidden;
@@ -42,9 +41,11 @@ aside{
 .tray button{
     display: flex;
     width: 100%;
-    border: 0 solid #161616;
+    border: 0px solid #ffffff;
+    border-bottom: 1px solid #969696;
     margin-right: 2px;
-    background-color: #7B7575;
+    background-color: #373737;
+    color:#FFFFFF;
 }
 
 .hide{
@@ -56,7 +57,6 @@ aside{
 div.tray div {
     min-width: 144px;
     box-sizing: border-box;
-    border: 1px solid #7b7575;
 }
 
 #program{
@@ -117,8 +117,16 @@ textarea{
     outline: none;
     overflow-y:auto;
 }
+
 footer{
     height:16px;
     background-color: #0254A0;
 }
 
+.downArrow {
+	background: url("images/sprites.png") no-repeat -313px -123px;
+	width: 12px;
+	height: 8px;
+    padding:0;
+    margin:0;
+}
