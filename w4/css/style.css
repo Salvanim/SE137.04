@@ -58,6 +58,8 @@ main .banner img{
     margin-bottom: 5px;
     display: flex;
     flex-direction: column;
+    width: 1440px;
+    height: 388px;
 }
 
 main .bottom{
@@ -125,6 +127,21 @@ main .rightMain p{
 }
 
 main .pennant {
+    width: 641px;
+    height: 229px;
+}
+
+main .overview {
+    margin: 10px;
+    background-color: rgb(57, 57, 57);
+    display: flex;
+    flex-direction: column;
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+    padding: 10px;
+}
+
+main .overview img{
     width: 641px;
     height: 229px;
 }
