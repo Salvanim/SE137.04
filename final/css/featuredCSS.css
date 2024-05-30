@@ -64,3 +64,15 @@ img {
     width: 300px;
     height: 450px;
 }
+
+.repo a:link{
+    text-align: center;
+    color: #f0a202;
+    text-decoration: none;
+}
+
+.repo a:visited{
+    text-align: center;
+    color: #b47903;
+    text-decoration: none;
+}
