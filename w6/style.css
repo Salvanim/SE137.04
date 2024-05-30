@@ -40,12 +40,37 @@ aside{
 }
 .tray button{
     display: flex;
+    flex-direction: column;
     width: 100%;
     border: 0px solid #ffffff;
     border-bottom: 1px solid #969696;
     margin-right: 2px;
     background-color: #373737;
     color:#FFFFFF;
+}
+
+.folders{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color:#FFFFFF;
+}
+
+.files{
+    display: flex;
+    flex-direction: row;
+}
+
+.fileContent{
+    display: flex;
+    flex-direction: row;
+    margin-left: 30px;
+    font-size: small;
+    text-align: center;
+}
+
+.paper{
+    height: 15px;
 }
 
 .hide{
@@ -85,11 +110,17 @@ nav{
     color: #000000
 }
 
+aside{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
 aside button{
     margin:0;
-    background-color:#161616;
+    background-color:#505050;
     color: white;
-    border: 0 solid #161616;
+    border: 0 solid #505050;
 }
 
 #breadcrumbs{
@@ -125,8 +156,30 @@ footer{
 
 .downArrow {
 	background: url("images/sprites.png") no-repeat -313px -123px;
-	width: 12px;
+	width: 15px;
 	height: 8px;
     padding:0;
     margin:0;
+}
+
+.buttonTop {
+	background: url('images/sprites.png') no-repeat -169px -25px;
+    width: 12px;
+    height: 12px;
+}
+
+.buttonBottom {
+	background: url('images/sprites.png') no-repeat -217px -2px;
+	width: 11px;
+	height: 11px;
+}
+
+.trashButton{
+    margin-top: auto;
+}
+
+.buttonTrash {
+	background: url('images/sprites.png') no-repeat -458px 0;
+	width: 11px;
+	height: 13px;
 }
