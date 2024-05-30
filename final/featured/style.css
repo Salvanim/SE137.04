@@ -1,0 +1,185 @@
+@charset "UTF-8";
+
+html{
+    height: 100%;
+    margin: 0;
+}
+body{
+    height:100%;
+    margin:0;
+}
+main{
+    height:100%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+}
+header{
+    height: 23px;
+    background-color:#505050;
+}
+section{
+    height: 100%;
+    display: flex;
+}
+aside{
+    background-color:#505050;
+    width: 45px;
+    display: flex;
+    flex-direction: column;
+}
+
+.tray{
+    width:144px;
+    min-width:144px;
+    background-color:#373737;
+    transition:all 1s;
+    display: flex;
+    justify-content: flex-end;
+    overflow: hidden;
+}
+.tray button{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: 0px solid #ffffff;
+    border-bottom: 1px solid #969696;
+    margin-right: 2px;
+    background-color: #373737;
+    color:#FFFFFF;
+}
+
+.folders{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color:#FFFFFF;
+}
+
+.files{
+    display: flex;
+    flex-direction: row;
+}
+
+.fileContent{
+    display: flex;
+    flex-direction: row;
+    margin-left: 30px;
+    font-size: small;
+    text-align: center;
+}
+
+.paper{
+    height: 15px;
+}
+
+.hide{
+    width: 0;
+    min-width:0;
+    transition:all 1s;
+}
+
+div.tray div {
+    min-width: 144px;
+    box-sizing: border-box;
+}
+
+#program{
+    background-color: #060606;
+    width:100%;
+    display:flex;
+    flex-direction: column;
+}
+nav{
+    height: 34px; 
+    display:flex;
+    overflow-x: auto;
+    color: white;
+} 
+
+#program button{
+    width:173px;
+    background-color:#161616;
+    border: 0 solid #161616;
+    margin-right: 2px;
+    color: #ffffff;
+}
+
+#program button:first-child{
+    background-color: #c2c2c2;
+    color: #000000
+}
+
+aside{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+aside button{
+    margin:0;
+    background-color:#505050;
+    color: white;
+    border: 0 solid #505050;
+}
+
+#breadcrumbs{
+    height:23px;
+    background-color: #161616;
+}
+
+#breadcrumbs p{
+    display: inline;
+    color: #ffffff;
+}
+
+#breadcrumbs a:visited {
+    color: #0365c0;
+}
+
+textarea{
+    box-sizing: border-box;
+    width:100%;
+    height:100%;
+    background-color: #060606;
+    color: white;
+    border: 0 solid #060606;
+    resize: none;
+    outline: none;
+    overflow-y:auto;
+}
+
+footer{
+    height:16px;
+    background-color: #0254A0;
+}
+
+.downArrow {
+	background: url("images/sprites.png") no-repeat -313px -123px;
+	width: 15px;
+	height: 8px;
+    padding:0;
+    margin:0;
+}
+
+.buttonTop {
+	background: url('images/sprites.png') no-repeat -169px -25px;
+    width: 12px;
+    height: 12px;
+}
+
+.buttonBottom {
+	background: url('images/sprites.png') no-repeat -217px -2px;
+	width: 11px;
+	height: 11px;
+}
+
+.trashButton{
+    margin-top: auto;
+}
+
+.buttonTrash {
+	background: url('images/sprites.png') no-repeat -458px 0;
+	width: 11px;
+	height: 13px;
+}
